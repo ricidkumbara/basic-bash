@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#flag=0
+#while [ true ]
+#do
+#    echo "OK"
+#    sleep 2
+
+#    flag=$(head -n 1 flag.txt)
+
+#    if [ $flag == "1" ]; then
+#        echo "Flag is running"
+#    fi
+
+#done
+
+# Not work in RBB Dev
+#flag=$(head -n 1 flag.txt)
+
+#if [ "${flag//$'\n'/\\n}" == "Y" ]; then
+#  echo "OK"
+#fi
+
+# Not work in RBB Dev
+# flagOK=Y
+# flag=$(awk "NR==1{print;exit}" flag.txt)
+
+# if [ "$flagOK" == "$flag" ]; then
+# 	echo "OK"
+# fi
+
+#
+json_data=$(cat _data.json)
+name=$(echo "$json_data" | grep -o '"name": *"[^"]*"' | sed 's/"name": "\(.*\)"/\1/')
+
+if [ "$name" == "fulan" ]; then
+	echo $name
+fi

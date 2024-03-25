@@ -1,0 +1,22 @@
+#!/bin/bash
+
+name=Ricid
+newName=$name
+fullName="$name Kumbara"
+
+echo $name
+echo $newName
+echo $fullName
+
+#
+## currentTimestamp="Current timestamp is " `date` <- not work, should no space 
+currentTimestamp="Current timestamp is "`date` 
+currentTimestamp2="Current timestamp is $(date)" 
+
+echo $currentTimestamp
+echo $currentTimestamp2
+echo "Today is " `date`
+echo ""
+
+currentDir=$(pwd)
+echo "Current dir is $currentDir"

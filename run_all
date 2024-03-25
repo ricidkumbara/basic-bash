@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "today is " `date`
+# echo "today is " date
+
+echo -e "\n enter the path to directory"
+read the_path
+
+echo -e "\n your path has following files and folders"
+ls $the_path
